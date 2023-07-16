@@ -34,11 +34,14 @@ body {
    border: none;
 }
 
+section {
+   margin: 30px 200px;
+}
+
 /* header part style  */
 header {
    background: rgba(255, 144, 14, 0.10);
    padding: 25px 200px;
-
 }
 
 nav {
@@ -81,37 +84,124 @@ nav a {
    margin-top: 25px;
 }
 
+/* team section part start  */
+.team-section-container {
+   display: flex;
+   gap: 40px;
+   align-items: center;
+}
+
+.team-img-container {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 10px;
+   width: 50%;
+}
+
+.team-section-container img {
+   width: 100%;
+}
+
+.team-content {
+   width: 50%;
+}
+
+.team-content h3 {
+   font-size: 2rem;
+   margin-bottom: 15px;
+}
+
+.team-content p {
+   margin-bottom: 15px;
+}
+
+.team-content-features {
+   color: #FF900E;
+}
+
+.Quick-list {
+   color: #727272;
+}
+
 /* responsive part start  */
+/* mobile device  */
 @media screen and (max-width: 576px) {
-  *{
-   font-size: 12px;
-  }
-   header{
+   * {
+      font-size: 12px;
+   }
+
+   header {
       padding: 20px;
    }
 
-   nav, nav > ul {
+   nav,
+   nav>ul
+   {
       flex-direction: column;
       margin-top: 10px;
    }
-   nav li{
+
+   .team-section-container {
+      flex-direction: column-reverse;
+   }
+
+   nav li {
       margin: 10px 0;
    }
+
    .banner-title {
       font-size: 2.8rem;
    }
+
+   section {
+      margin: 20px;
+   }
+
+   .team-content,
+   .team-img-container {
+      width: 100%;
+   }
+
+   .Quick-list,
+   .team-content-features,
+   .team-content span {
+      font-size: 2.2rem;
+   }
+
+   .btn-primary {
+      padding: 10px 20px;
+   }
+  
 }
 
 
-
+/* table or medium device  */
 @media screen and (min-width: 577px) and (max-width: 992px) {
-   *{
+   * {
       font-size: 14px;
    }
-   header{
+
+   header {
       padding: 20px;
    }
-   .banner-title{
+   section{
+      margin: 30px;
+   }
+   .banner-title {
       font-size: 3.5rem;
+   }
+   .team-section-container{
+      flex-direction: column;
+   }
+   .team-img-container, .team-content{
+      width: 100%;
+   }
+   .Quick-list,
+   .team-content-features,
+   .team-content span {
+      font-size: 3rem;
+   }
+   .btn-primary {
+      padding: 15px 20px;
    }
 }
